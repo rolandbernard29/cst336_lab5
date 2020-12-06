@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 //const fetch = require("node-fetch");
-//const request = require("request");
+const request = require("request");
 const pool = require("./dbPool.js");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -103,3 +103,7 @@ function getRandomImage(keyword, count) {
 app.listen(process.env.PORT, process.env.IP, function() {
     console.log("Express server is running....");
 });
+
+//app.listen("8080", "127.0.0.1", function() {
+//    console.log("Running Express Server..."); 
+//});
